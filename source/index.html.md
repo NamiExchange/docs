@@ -10,6 +10,7 @@ toc_footers:
 
 includes:
   - introduction
+  - api_access
   - change_log
   - authentication
   - market_data
