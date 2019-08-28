@@ -110,7 +110,7 @@ exchange_currency   | string | Exchange currency, for example: with symbol BTCUS
 ## Get Market Depth
 
 ```shell
-curl "https://nami.exchange/api/v1.0/market/depth"
+curl "https://nami.exchange/api/v1.0/market/depth?symbol=ETHUSDT"
 ```
 
 
@@ -160,7 +160,7 @@ asks  | ojbject | The current all asks in format [amount, exchange_rate, action]
 ## Get the Most Recent Trades
 
 ```shell
-curl "https://nami.exchange/api/v1.0/market/history/trade"
+curl "https://nami.exchange/api/v1.0/market/history/trade?symbol=ETHUSDT"
 ```
 
 
