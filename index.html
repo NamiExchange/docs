@@ -536,7 +536,7 @@
 <td>Exchange currency, for example: with symbol BTCUSDT, base currency is BTC</td>
 </tr>
 </tbody></table>
-<h2 id='get-market-depth'>Get Market Depth</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/depth"</span>
+<h2 id='get-market-depth'>Get Market Depth</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/depth?symbol=ETHUSDT"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -611,7 +611,7 @@
 <td>The current all asks in format [amount, exchange_rate, action]</td>
 </tr>
 </tbody></table>
-<h2 id='get-the-most-recent-trades'>Get the Most Recent Trades</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/history/trade"</span>
+<h2 id='get-the-most-recent-trades'>Get the Most Recent Trades</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/history/trade?symbol=ETHUSDT"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
