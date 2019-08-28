@@ -1,0 +1,744 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="images/favicon.ico" rel="icon" type="image/ico" />
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#api-access" class="toc-h1 toc-link" data-title="API Access">API Access</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#access-urls" class="toc-h2 toc-link" data-title="Access URLs">Access URLs</a>
+                  </li>
+                  <li>
+                    <a href="#endpoint-rate-limit" class="toc-h2 toc-link" data-title="Endpoint Rate Limit">Endpoint Rate Limit</a>
+                  </li>
+                  <li>
+                    <a href="#request-format" class="toc-h2 toc-link" data-title="Request Format">Request Format</a>
+                  </li>
+                  <li>
+                    <a href="#response-format" class="toc-h2 toc-link" data-title="Response Format">Response Format</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#changelog" class="toc-h1 toc-link" data-title="Changelog">Changelog</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#market-data" class="toc-h1 toc-link" data-title="Market Data">Market Data</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-exchange-info" class="toc-h2 toc-link" data-title="Get Exchange Info">Get Exchange Info</a>
+                  </li>
+                  <li>
+                    <a href="#get-24hr-ticker-price" class="toc-h2 toc-link" data-title="Get 24hr ticker price">Get 24hr ticker price</a>
+                  </li>
+                  <li>
+                    <a href="#get-market-depth" class="toc-h2 toc-link" data-title="Get Market Depth">Get Market Depth</a>
+                  </li>
+                  <li>
+                    <a href="#get-the-most-recent-trades" class="toc-h2 toc-link" data-title="Get the Most Recent Trades">Get the Most Recent Trades</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to Nami.Exchange, we provides a simple and powerful API consisting of REST endpoints for market updates. </p>
+
+<p>We have code example in Shell! You can view code examples in the dark area to the right.</p>
+
+<p>If you have any API questions, feedback, or recommendations please post a question via our Github page  <a href="https://github.com/NamiExchange/namiexchange.github.io/issues">Github page</a></p>
+<h1 id='api-access'>API Access</h1><h2 id='access-urls'>Access URLs</h2>
+<ul>
+<li>The base endpoint is: <code>https://nami.exchange/api/v1.0</code></li>
+<li>All REST requests must be sent using the application/json content type. Non-HTTPS requests will be redirected to HTTPS, possibly causing functional or performance issues with your application.</li>
+<li>All REST requests will result in a <code>200 Ok</code> response unless there is a server or infrastructure error. The API result will be wrapped in a JSON Result object, where the <code>status</code> field indicates response status.</li>
+</ul>
+<h2 id='endpoint-rate-limit'>Endpoint Rate Limit</h2>
+<p>The Nami.Exchange API employs call limits on all endpoints to ensure the efficiency and availability of the platform for all customers. In general, API users are permitted to make a maximum of 60 API calls per minute. Calls after the limit will fail, with the limit resetting at the start of the next minute. If your IP reachs rate limit too much, your IP will be banned within 1 hour. So, always pay attention to the frequency of requests</p>
+<h2 id='request-format'>Request Format</h2>
+<p>All API requests are in either GET or POST method. For GET request, all parameters are path parameters. For POST request, all parameters are in POST body and in JSON format.</p>
+<h2 id='response-format'>Response Format</h2>
+<p>All response will be returned in JSON format. The top level JSON is a wrapper object which has metadata &quot;status&quot;. The actual per API response data is in &quot;data&quot; field.
+<strong>Response JSON Wrapper Content</strong></p>
+
+<blockquote>
+<p>Response wrapper content example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">  </span><span class="s2">"API response data in nested JSON object"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>string</td>
+<td>The overall API call result status</td>
+</tr>
+<tr>
+<td>data</td>
+<td>object</td>
+<td>The actual response content per API</td>
+</tr>
+</tbody></table>
+<h1 id='changelog'>Changelog</h1>
+<table><thead>
+<tr>
+<th><strong>Time (UTC+7)</strong></th>
+<th><strong>Change Detail</strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>2019.08.26 08:00</td>
+<td>Public Market Data API at endpoint <code>https://nami.exchange/api/v1.0/market</code>.</td>
+</tr>
+</tbody></table>
+<h1 id='authentication'>Authentication</h1>
+<p>The Market Data API (<code>https://nami.exchange/api/v1.0/market</code>) does not require authentication.</p>
+<h1 id='market-data'>Market Data</h1><h2 id='get-exchange-info'>Get Exchange Info</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/symbols"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETHUSDT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"exchange_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TRADING"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"min_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0001</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"max_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000000</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tick_size"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"step_size"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00001</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"min_qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00001</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"max_qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">9000</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"min_notional"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Current exchange trading rules and symbol information</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /market/symbols</code></p>
+<h3 id='response-content'>Response Content</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>The trading symbol of this object, e.g. btcusdt, bccbtc</td>
+</tr>
+<tr>
+<td>base_currency</td>
+<td>string</td>
+<td>Base currency, for example: with symbol BTCUSDT, base currency is USDT</td>
+</tr>
+<tr>
+<td>exchange_currency</td>
+<td>string</td>
+<td>Exchange currency, for example: with symbol BTCUSDT, base currency is BTC</td>
+</tr>
+<tr>
+<td>min_price</td>
+<td>float</td>
+<td>Min exchange rate</td>
+</tr>
+<tr>
+<td>max_price</td>
+<td>float</td>
+<td>Max exchange rate</td>
+</tr>
+<tr>
+<td>tick_size</td>
+<td>float</td>
+<td>Min exchange rate movement</td>
+</tr>
+<tr>
+<td>step_size</td>
+<td>float</td>
+<td>Min exchange amount movement</td>
+</tr>
+<tr>
+<td>min_qty</td>
+<td>float</td>
+<td>Min exchange amount</td>
+</tr>
+<tr>
+<td>max_qty</td>
+<td>float</td>
+<td>Max exchange amount</td>
+</tr>
+<tr>
+<td>min_notional</td>
+<td>float</td>
+<td>Min value of exchange_rate*exchange_amount</td>
+</tr>
+</tbody></table>
+<h2 id='get-24hr-ticker-price'>Get 24hr ticker price</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/summaries"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+         </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTCUSDT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"last_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">10090.8</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_24h"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"last_price_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10080.8</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"high_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10099.8</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"low_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10079.8</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"high_1h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10099.8</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"low_1h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10079.8</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"total_exchange_volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.459</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"total_base_volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">206232.93</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"exchange_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Get 24h ticker data of all available symbols or specific symbol.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /market/summaries</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Data Type</th>
+<th>Required</th>
+<th>Default Value</th>
+<th>Description</th>
+<th>Value Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>false</td>
+<td>NA</td>
+<td>The trading symbol to query</td>
+<td>All supported trading symbols, e.g. btcusdt, ethusdt</td>
+</tr>
+</tbody></table>
+<h3 id='response-content-2'>Response Content</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>The trading symbol of this object, e.g. btcusdt, bccbtc</td>
+</tr>
+<tr>
+<td>last_price</td>
+<td>float</td>
+<td>The last price</td>
+</tr>
+<tr>
+<td>change_24h</td>
+<td>float</td>
+<td>Change compare to last  24 hours price</td>
+</tr>
+<tr>
+<td>last_price_24h</td>
+<td>float</td>
+<td>Last price 24 hours</td>
+</tr>
+<tr>
+<td>high_24h</td>
+<td>float</td>
+<td>The high price of last 24 hours</td>
+</tr>
+<tr>
+<td>low_24h</td>
+<td>float</td>
+<td>The low price of last 24 hours</td>
+</tr>
+<tr>
+<td>high_1h</td>
+<td>float</td>
+<td>The high price of last 1 hours</td>
+</tr>
+<tr>
+<td>low_1h</td>
+<td>float</td>
+<td>The low price of last 1 hours</td>
+</tr>
+<tr>
+<td>total_exchange_volume</td>
+<td>float</td>
+<td>The trading volume in exchange currency of last 24 hours</td>
+</tr>
+<tr>
+<td>total_base_volume</td>
+<td>float</td>
+<td>The trading volume in base currency of last 24 hours</td>
+</tr>
+<tr>
+<td>base_currency</td>
+<td>string</td>
+<td>Base currency, for example: with symbol BTCUSDT, base currency is USDT</td>
+</tr>
+<tr>
+<td>exchange_currency</td>
+<td>string</td>
+<td>Exchange currency, for example: with symbol BTCUSDT, base currency is BTC</td>
+</tr>
+</tbody></table>
+<h2 id='get-market-depth'>Get Market Depth</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/depth"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"bids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.521268</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"exchange_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">186.01</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"asks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9578</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"exchange_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">192.99</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELL"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the current order book of a specific symbol.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /market/depth</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Data Type</th>
+<th>Required</th>
+<th>Default Value</th>
+<th>Description</th>
+<th>Value Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>true</td>
+<td>NA</td>
+<td>The trading symbol to query</td>
+<td>All supported trading symbols, e.g. btcusdt, ethusdt</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>int</td>
+<td>false</td>
+<td>20</td>
+<td>Limit depth of order book</td>
+<td>[1-20]</td>
+</tr>
+</tbody></table>
+<h3 id='response-content-3'>Response Content</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bids</td>
+<td>object</td>
+<td>The current all bids in format [amount, exchange_rate, action]</td>
+</tr>
+<tr>
+<td>asks</td>
+<td>ojbject</td>
+<td>The current all asks in format [amount, exchange_rate, action]</td>
+</tr>
+</tbody></table>
+<h2 id='get-the-most-recent-trades'>Get the Most Recent Trades</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/history/trade"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"direction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELL"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"exchange_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00652</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"exchange_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">3354</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"base_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">21.86808</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1567006044486</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the most recent trades with their exchange rate, base amount, exchange amount, and direction.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET /market/history/trade</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Data Type</th>
+<th>Required</th>
+<th>Default Value</th>
+<th>Description</th>
+<th>Value Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>true</td>
+<td>NA</td>
+<td>The trading symbol to query</td>
+<td>All supported trading symbols, e.g. btcusdt, ethusdt</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>int</td>
+<td>false</td>
+<td>20</td>
+<td>Limit depth of order book</td>
+<td>[1-100]</td>
+</tr>
+</tbody></table>
+<h3 id='response-content-4'>Response Content</h3>
+<aside class="notice">
+The returned data object is an array represents all trades occurred.
+</aside>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>base_amount</td>
+<td>float</td>
+<td>The trading volume in base currency</td>
+</tr>
+<tr>
+<td>exchange_amount</td>
+<td>float</td>
+<td>The trading volume in exchange currency</td>
+</tr>
+<tr>
+<td>exchange_rate</td>
+<td>float</td>
+<td>The trading price in quote currency</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>integer</td>
+<td>The UNIX timestamp in milliseconds</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>string</td>
+<td>The direction of the taker trade: &#39;BUY&#39; or &#39;SELL&#39;</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<p>Each error will have a status and message which explain the details of the error.</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request, your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+</tr>
+<tr>
+<td>418</td>
+<td>IP Banned</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
