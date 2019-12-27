@@ -2,13 +2,7 @@
 
 ## Public API
 The Market Data API (`https://nami.exchange/api/v1.0/market`) does not require authentication.
-
-
-    'api-expires': expires,
-    'api-key': apiKey,
-    'api-signature': signature,
-    
-    
+   
 ## Authentication using API key
 Authentication is done by sending the following HTTP headers:
 
@@ -18,14 +12,15 @@ Authentication is done by sending the following HTTP headers:
 
 ## Example using API key
 Use these calculations as test cases in your code.
-```shell
+
+```bash
 apiKey = 'zukHJtjyIKUN22WhrkNSzf54CzsMtR4m'
 apiSecret = 'bXKoe2Gr3nes99nMmpu44h7hCNQlZf6GAPJ3oAueRcRYWpdnhWKgVu64roeOO7Gh'
 
-#
-# Simple GET 
-# Get user wallet from /api/v1.0/user/wallet
-#
+
+Simple GET 
+Get user wallet from /api/v1.0/user/wallet
+
 verb = 'GET'
 url = /api/v1.0/user/wallet
 params = {
@@ -35,15 +30,15 @@ params = {
 expires = 1518064236 # Friday, December 27, 2019 4:39:51 AM
 data = ''
 
-# signagure = HEX(HMAC_SHA256(apiSecret, verb + path + str(expires) + data))
-# signagure = HEX(HMAC_SHA256(apiSecret, 'GET/api/v1.0/user/wallet?currency=ETH1577421591'))
-# signagure = 'e24d08880b9d9b6c1f77fecc5977ed1a9ee1102ab0f34757e792057f1c78a3a5'
+signagure = HEX(HMAC_SHA256(apiSecret, verb + path + str(expires) + data))
+signagure = HEX(HMAC_SHA256(apiSecret, 'GET/api/v1.0/user/wallet?currency=ETH1577421591'))
+signagure = 'e24d08880b9d9b6c1f77fecc5977ed1a9ee1102ab0f34757e792057f1c78a3a5'
 
 
-#
-# Simple POST 
-# Create new Order from /api/v1.0/spot/order
-#
+
+Simple POST 
+Create new Order from /api/v1.0/spot/order
+
 verb = 'POST'
 url = /api/v1.0/spot/order
 params = {}
@@ -58,10 +53,9 @@ data = {
     stop_price: 0 
 }
 
-# signagure = HEX(HMAC_SHA256(apiSecret, verb + path + str(expires) + data))
-# signagure = HEX(HMAC_SHA256(apiSecret, 'POST/api/v1.0/spot/order1577421880{"symbol":"NACUSDT","side":"BUY","type":"LIMIT","quantity":1,"price":1,"stop_price":0}'))
-# signagure = '986ac8fa1d263cd047aa7791be3f185fe892ce4dbfc9c8d09fc3a2f39715cddb'
-
+signagure = HEX(HMAC_SHA256(apiSecret, verb + path + str(expires) + data))
+signagure = HEX(HMAC_SHA256(apiSecret, 'POST/api/v1.0/spot/order1577421880{"symbol":"NACUSDT","side":"BUY","type":"LIMIT","quantity":1,"price":1,"stop_price":0}'))
+signagure = '986ac8fa1d263cd047aa7791be3f185fe892ce4dbfc9c8d09fc3a2f39715cddb'
 ```
 
 ## Troubleshooting
