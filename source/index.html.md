@@ -13,7 +13,10 @@ includes:
   - api_access
   - change_log
   - authentication
-  > - market_data
+  - market_data
+  - account
+  - user
+  - trade
   - errors
 
 search: true
