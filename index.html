@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="images/favicon.ico" rel="icon" type="image/ico" />
+    <link href="images/favicon-8a170c45.ico" rel="icon" type="image/ico" />
     <title>API Reference</title>
 
     <style>
@@ -43,7 +43,7 @@
 .highlight .cs {
   color: #75715e;
 }
-.highlight .c, .highlight .cd {
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
   color: #75715e;
 }
 .highlight .err {
@@ -127,7 +127,7 @@
 .highlight .s1 {
   color: #e6db74;
 }
-.highlight .s {
+.highlight .s, .highlight .sa, .highlight .dl {
   color: #e6db74;
 }
 .highlight .na {
@@ -142,41 +142,52 @@
 .highlight .ne {
   color: #a6e22e;
 }
-.highlight .nf {
+.highlight .nf, .highlight .fm {
   color: #a6e22e;
 }
 .highlight .vc {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .nn {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .nl {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .ni {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .bp {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .vg {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .vi {
   color: #ffffff;
+  background-color: #272822;
 }
-.highlight .nv {
+.highlight .nv, .highlight .vm {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .w {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .n, .highlight .py, .highlight .nx {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .ow {
   color: #f92672;
@@ -197,19 +208,19 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all.js"></script>
+    <link href="stylesheets/screen-36b4bc95.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-c427a123.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-e033bdd3.js"></script>
   </head>
 
   <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
-        <img src="images/navbar.png" alt="Navbar" />
+        <img src="images/navbar-434a1108.png" alt="" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
+      <img src="images/logo-5f0009d7.png" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
         </div>
@@ -272,6 +283,9 @@
                   </li>
                   <li>
                     <a href="#get-the-most-recent-trades" class="toc-h2 toc-link" data-title="Get the Most Recent Trades">Get the Most Recent Trades</a>
+                  </li>
+                  <li>
+                    <a href="#get-tickers-data" class="toc-h2 toc-link" data-title="Get Tickers Data">Get Tickers Data</a>
                   </li>
               </ul>
           </li>
@@ -352,11 +366,11 @@
 <blockquote>
 <p>Response wrapper content example:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">  </span><span class="s2">"API response data in nested JSON object"</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w">  </span><span class="s2">"API response data in nested JSON object"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <table><thead>
 <tr>
 <th>Field</th>
@@ -407,7 +421,7 @@
 </ul>
 <h2 id='example-using-api-key'>Example using API key</h2>
 <p>Use these calculations as test cases in your code.</p>
-<pre class="highlight shell"><code>apiKey <span class="o">=</span> <span class="s1">'zukHJtjyIKUN22WhrkNSzf54CzsMtR4m'</span>
+<div class="highlight"><pre class="highlight shell"><code>apiKey <span class="o">=</span> <span class="s1">'zukHJtjyIKUN22WhrkNSzf54CzsMtR4m'</span>
 apiSecret <span class="o">=</span> <span class="s1">'bXKoe2Gr3nes99nMmpu44h7hCNQlZf6GAPJ3oAueRcRYWpdnhWKgVu64roeOO7Gh'</span>
 
 
@@ -419,7 +433,7 @@ url <span class="o">=</span> /api/v1.0/user/wallet
 params <span class="o">=</span> <span class="o">{</span>
     currency: <span class="s1">'ETH'</span>
 <span class="o">}</span>
-<span class="gp">=&gt; </span>path <span class="o">=</span> <span class="s1">'/api/v1.0/user/wallet?currency=ETH'</span>
+<span class="o">=&gt;</span> path <span class="o">=</span> <span class="s1">'/api/v1.0/user/wallet?currency=ETH'</span>
 expires <span class="o">=</span> 1518064236 <span class="c"># Friday, December 27, 2019 4:39:51 AM</span>
 data <span class="o">=</span> <span class="s1">''</span>
 
@@ -435,7 +449,7 @@ Create new Order from /api/v1.0/spot/order
 verb <span class="o">=</span> <span class="s1">'POST'</span>
 url <span class="o">=</span> /api/v1.0/spot/order
 params <span class="o">=</span> <span class="o">{}</span>
-<span class="gp">=&gt; </span>path <span class="o">=</span> <span class="s1">'/api/v1.0/spot/order'</span>
+<span class="o">=&gt;</span> path <span class="o">=</span> <span class="s1">'/api/v1.0/spot/order'</span>
 expires <span class="o">=</span> 1577421880 <span class="c"># Friday, December 27, 2019 4:44:40 AM</span>
 data <span class="o">=</span> <span class="o">{</span> 
     symbol: <span class="s1">'NACUSDT'</span>,
@@ -449,7 +463,7 @@ data <span class="o">=</span> <span class="o">{</span>
 signagure <span class="o">=</span> HEX<span class="o">(</span>HMAC_SHA256<span class="o">(</span>apiSecret, verb + path + str<span class="o">(</span>expires<span class="o">)</span> + data<span class="o">))</span>
 signagure <span class="o">=</span> HEX<span class="o">(</span>HMAC_SHA256<span class="o">(</span>apiSecret, <span class="s1">'POST/api/v1.0/spot/order1577421880{"symbol":"NACUSDT","side":"BUY","type":"LIMIT","quantity":1,"price":1,"stop_price":0}'</span><span class="o">))</span>
 signagure <span class="o">=</span> <span class="s1">'986ac8fa1d263cd047aa7791be3f185fe892ce4dbfc9c8d09fc3a2f39715cddb'</span>
-</code></pre><h2 id='troubleshooting'>Troubleshooting</h2>
+</code></pre></div><h2 id='troubleshooting'>Troubleshooting</h2>
 <p><strong>If you are receiving &quot;Invalid API Key&quot; messages, check the following:</strong></p>
 
 <ul>
@@ -470,30 +484,30 @@ signagure <span class="o">=</span> <span class="s1">'986ac8fa1d263cd047aa7791be3
 <li>Ensure your request body is being properly sent. Try a few sample requests against httpbin.</li>
 <li>Ensure you are signing the exact string that is being sent to the server. Certain JSON serializers have unstable key ordering, so serialize to a string first, sign that string, and then send the same string in the request body.</li>
 </ul>
-<h1 id='market-data'>Market Data</h1><h2 id='get-exchange-info'>Get Exchange Info</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/symbols"</span>
-</code></pre>
+<h1 id='market-data'>Market Data</h1><h2 id='get-exchange-info'>Get Exchange Info</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/symbols"</span>
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETHUSDT"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"exchange_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDT"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TRADING"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"min_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0001</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"max_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000000</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"tick_size"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"step_size"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00001</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"min_qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00001</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"max_qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">9000</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"min_notional"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+            </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETHUSDT"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"exchange_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDT"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TRADING"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"min_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0001</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"max_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000000</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"tick_size"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"step_size"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00001</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"min_qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00001</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"max_qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">9000</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"min_notional"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>Current exchange trading rules and symbol information</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET /market/symbols</code></p>
@@ -556,31 +570,31 @@ signagure <span class="o">=</span> <span class="s1">'986ac8fa1d263cd047aa7791be3
 <td>Min value of exchange_rate*exchange_amount</td>
 </tr>
 </tbody></table>
-<h2 id='get-24hr-ticker-price'>Get 24hr ticker price</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/summaries"</span>
-</code></pre>
+<h2 id='get-24hr-ticker-price'>Get 24hr ticker price</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/summaries"</span>
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
          </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTCUSDT"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"last_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">10090.8</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"change_24h"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"last_price_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10080.8</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"high_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10099.8</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"low_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10079.8</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"high_1h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10099.8</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"low_1h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10079.8</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_exchange_volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.459</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_base_volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">206232.93</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDT"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"exchange_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="w">
+            </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTCUSDT"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">10090.8</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"change_24h"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_price_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10080.8</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"high_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10099.8</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"low_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10079.8</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"high_1h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10099.8</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"low_1h"</span><span class="p">:</span><span class="w"> </span><span class="mf">10079.8</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"total_exchange_volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.459</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"total_base_volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">206232.93</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDT"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"exchange_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>Get 24h ticker data of all available symbols or specific symbol.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET /market/summaries</code></p>
@@ -673,31 +687,31 @@ signagure <span class="o">=</span> <span class="s1">'986ac8fa1d263cd047aa7791be3
 <td>Exchange currency, for example: with symbol BTCUSDT, base currency is BTC</td>
 </tr>
 </tbody></table>
-<h2 id='get-market-depth'>Get Market Depth</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/depth?symbol=ETHUSDT"</span>
-</code></pre>
+<h2 id='get-market-depth'>Get Market Depth</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/depth?symbol=ETHUSDT"</span>
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"bids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"bids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.521268</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"exchange_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">186.01</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="w">
+                </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.521268</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"exchange_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">186.01</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">],</span><span class="w">
-        </span><span class="s2">"asks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="nl">"asks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9578</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"exchange_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">192.99</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELL"</span><span class="w">
+                </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9578</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"exchange_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">192.99</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELL"</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>This endpoint retrieves the current order book of a specific symbol.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET /market/depth</code></p>
@@ -748,24 +762,24 @@ signagure <span class="o">=</span> <span class="s1">'986ac8fa1d263cd047aa7791be3
 <td>The current all asks in format [amount, exchange_rate, action]</td>
 </tr>
 </tbody></table>
-<h2 id='get-the-most-recent-trades'>Get the Most Recent Trades</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/history/trade?symbol=ETHUSDT"</span>
-</code></pre>
+<h2 id='get-the-most-recent-trades'>Get the Most Recent Trades</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/market/history/trade?symbol=ETHUSDT"</span>
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"direction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELL"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"exchange_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00652</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"exchange_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">3354</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"base_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">21.86808</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1567006044486</span><span class="w">
+            </span><span class="nl">"direction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELL"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"exchange_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00652</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"exchange_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">3354</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">21.86808</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1567006044486</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>This endpoint retrieves the most recent trades with their exchange rate, base amount, exchange amount, and direction.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>GET /market/history/trade</code></p>
@@ -835,6 +849,111 @@ The returned data object is an array represents all trades occurred.
 <td>The direction of the taker trade: &#39;BUY&#39; or &#39;SELL&#39;</td>
 </tr>
 </tbody></table>
+<h2 id='get-tickers-data'>Get Tickers Data</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://data.nami.exchange/nami/prices/history?symbol=BTCUSDT&amp;resolution=60&amp;from=1606017873&amp;to=1606104273"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"t"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1606093200</span><span class="p">,</span><span class="w"> </span><span class="mi">1606096800</span><span class="p">,</span><span class="w"> </span><span class="mi">1606100400</span><span class="p">,</span><span class="w"> </span><span class="mi">1606104000</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"o"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">741</span><span class="p">,</span><span class="w"> </span><span class="mi">779</span><span class="p">,</span><span class="w"> </span><span class="mi">765</span><span class="p">,</span><span class="w"> </span><span class="mi">760</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"h"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">782</span><span class="p">,</span><span class="w"> </span><span class="mi">779</span><span class="p">,</span><span class="w"> </span><span class="mi">774</span><span class="p">,</span><span class="w"> </span><span class="mi">763</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"l"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">736</span><span class="p">,</span><span class="w"> </span><span class="mi">760</span><span class="p">,</span><span class="w"> </span><span class="mi">760</span><span class="p">,</span><span class="w"> </span><span class="mi">757</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"c"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">779</span><span class="p">,</span><span class="w"> </span><span class="mi">765</span><span class="p">,</span><span class="w"> </span><span class="mi">760</span><span class="p">,</span><span class="w"> </span><span class="mi">759</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"v"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"s"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves the ticker data with open, close, high, low and time of ticker.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://data.nami.exchange/nami/prices/history</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Data Type</th>
+<th>Required</th>
+<th>Default Value</th>
+<th>Description</th>
+<th>Value Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>true</td>
+<td>NA</td>
+<td>The trading symbol to query</td>
+<td>All supported trading symbols, e.g. btcusdt, ethusdt</td>
+</tr>
+<tr>
+<td>resolution</td>
+<td>string</td>
+<td>true</td>
+<td>20</td>
+<td>Timeframe of ticker</td>
+<td>[1, 60, D]</td>
+</tr>
+<tr>
+<td>from</td>
+<td>int</td>
+<td>true</td>
+<td>20</td>
+<td>From in timestamp</td>
+<td>[1-100]</td>
+</tr>
+<tr>
+<td>to</td>
+<td>int</td>
+<td>true</td>
+<td>20</td>
+<td>To in timestamp</td>
+<td>[1-100]</td>
+</tr>
+</tbody></table>
+<h3 id='response-content-5'>Response Content</h3>
+<aside class="notice">
+The returned data object is an array represents all trades occurred.
+</aside>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>t</td>
+<td>float</td>
+<td>Time of tickers in array</td>
+</tr>
+<tr>
+<td>o</td>
+<td>float</td>
+<td>Open Data of tickers in array</td>
+</tr>
+<tr>
+<td>h</td>
+<td>float</td>
+<td>High Data of tickers in array</td>
+</tr>
+<tr>
+<td>l</td>
+<td>integer</td>
+<td>Low Data of tickers in array</td>
+</tr>
+<tr>
+<td>v</td>
+<td>string</td>
+<td>Volume of tickers in array</td>
+</tr>
+<tr>
+<td>s</td>
+<td>string</td>
+<td>Status</td>
+</tr>
+</tbody></table>
 <h1 id='account'>Account</h1><h2 id='access-urls'>Access URLs</h2>
 <ul>
 <li>The base endpoint is: <code>https://nami.exchange/api/v1.0</code></li>
@@ -852,11 +971,11 @@ The returned data object is an array represents all trades occurred.
 <blockquote>
 <p>Response wrapper content example:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">  </span><span class="s2">"API response data in nested JSON object"</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w">  </span><span class="s2">"API response data in nested JSON object"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <table><thead>
 <tr>
 <th>Field</th>
@@ -875,36 +994,36 @@ The returned data object is an array represents all trades occurred.
 <td>The actual response content per API</td>
 </tr>
 </tbody></table>
-<h1 id='user'>User</h1><h2 id='get-user-wallet'>Get User Wallet</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/user/wallet"</span>
-</code></pre>
+<h1 id='user'>User</h1><h2 id='get-user-wallet'>Get User Wallet</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/user/wallet"</span>
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NAC"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">2465</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"locked_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NAC"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">2465</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"locked_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">1009.8500524310101</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"locked_value"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.10001</span><span class="w">
+        </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">1009.8500524310101</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"locked_value"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.10001</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DAI"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"locked_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DAI"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"locked_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SPIN"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">26058.942333333325</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"locked_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">11271</span><span class="w">
+        </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SPIN"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">26058.942333333325</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"locked_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">11271</span><span class="w">
     </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>API Key Permission：Read
 This endpoint submit a request to create an order.</p>
 <h3 id='http-request'>HTTP Request</h3>
@@ -953,29 +1072,29 @@ This endpoint submit a request to create an order.</p>
 <td>Lock value in spot, futures,...</td>
 </tr>
 </tbody></table>
-<h1 id='trading'>Trading</h1><h2 id='get-opening-order'>Get Opening Order</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/spot/order"</span>
-</code></pre>
+<h1 id='trading'>Trading</h1><h2 id='get-opening-order'>Get Opening Order</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/spot/order"</span>
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STOP_LIMIT"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PENDING"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"stopPrice"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDT"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"exchange_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NAC"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-26T11:29:23.721Z"</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STOP_LIMIT"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PENDING"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"stopPrice"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDT"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"exchange_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NAC"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-26T11:29:23.721Z"</span><span class="w">
     </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>API Key Permission：Read
 This endpoint submit a request to create an order.</p>
 <h3 id='http-request'>HTTP Request</h3>
@@ -1046,26 +1165,26 @@ This endpoint submit a request to create an order.</p>
 <td>The timestamp when the order was created</td>
 </tr>
 </tbody></table>
-<h2 id='get-history-order'>Get History Order</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/spot/order_history"</span>
-</code></pre>
+<h2 id='get-history-order'>Get History Order</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nami.exchange/api/v1.0/spot/order_history"</span>
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NACUSDT"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LIMIT"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-27T03:03:56.497Z"</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NACUSDT"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LIMIT"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-27T03:03:56.497Z"</span><span class="w">
     </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>API Key Permission：Read
 This endpoint submit a request to create an order.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
@@ -1152,7 +1271,7 @@ This endpoint submit a request to create an order.</p>
 <td>The timestamp when the order was created</td>
 </tr>
 </tbody></table>
-<h2 id='place-a-new-order'>Place a New Order</h2><pre class="highlight shell tab-shell"><code>curl -X POST -H <span class="s2">"Content-Type: application/json"</span> <span class="s2">"https://nami.exchange/api/v1.0/spot/order"</span> -d
+<h2 id='place-a-new-order'>Place a New Order</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="s2">"https://nami.exchange/api/v1.0/spot/order"</span> <span class="nt">-d</span>
 <span class="s1">'{
     "symbol": "NACUSDT",
     "side": "SELL",
@@ -1161,21 +1280,21 @@ This endpoint submit a request to create an order.</p>
     "price": 1,
     "stop_price": 0
 }'</span>
-</code></pre>
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">  
-   </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
-   </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">  
-      </span><span class="s2">"symbol"</span><span class="p">:</span><span class="s2">"NACUSDT"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"side"</span><span class="p">:</span><span class="s2">"SELL"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"exchange_amount"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"avg_price"</span><span class="p">:</span><span class="mi">1</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">  
+   </span><span class="nl">"status"</span><span class="p">:</span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"data"</span><span class="p">:{</span><span class="w">  
+      </span><span class="nl">"symbol"</span><span class="p">:</span><span class="s2">"NACUSDT"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"side"</span><span class="p">:</span><span class="s2">"SELL"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"exchange_amount"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"avg_price"</span><span class="p">:</span><span class="mi">1</span><span class="w">
    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>API Key Permission：Exchange
 This endpoint submit a request to create an order.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
@@ -1289,22 +1408,22 @@ This endpoint submit a request to create an order.</p>
 <td>Order Avg Price for MARKET</td>
 </tr>
 </tbody></table>
-<h2 id='delete-order'>Delete Order</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'https://nami.exchange/api/v1.0/spot/order'</span> <span class="se">\</span>
---header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
---data-raw <span class="s1">'{
+<h2 id='delete-order'>Delete Order</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--location</span> <span class="nt">--request</span> DELETE <span class="s1">'https://nami.exchange/api/v1.0/spot/order'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+<span class="nt">--data-raw</span> <span class="s1">'{
     "id": 1238912
 }'</span>
-</code></pre>
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">  
-   </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
-   </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">  
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">1238912</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">  
+   </span><span class="nl">"status"</span><span class="p">:</span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"data"</span><span class="p">:{</span><span class="w">  
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1238912</span><span class="w">
    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>API Key Permission：Exchange
 This endpoint submit a request to create an order.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
